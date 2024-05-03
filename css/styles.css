@@ -196,11 +196,9 @@ figure {
   max-height: 100%;
   width: auto;
   height: auto;
-  display: block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex; /* Changed to flex */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .edu-img{
@@ -418,7 +416,7 @@ h6, .h6 {
 }
 
 .lead-container {
-  display: flex;
+  display: block;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Ensure container takes up the full viewport height */
