@@ -68,18 +68,6 @@ body {
   outline: 0 !important;
 }
 
-.banner {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -203,7 +191,7 @@ figure {
   margin: 0 0 1rem;
 }
 .top-img{
-  width: 60vw;
+  width: 90vw;
   display: block;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -425,8 +413,9 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-weight: 300;
+  text-align: center;
 }
 
 .display-1 {
