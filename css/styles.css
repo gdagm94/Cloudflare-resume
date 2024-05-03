@@ -197,8 +197,7 @@ figure {
   width: auto;
   height: auto;
   display: block; /* Changed to flex */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  vertical-align: center;
 }
 
 .edu-img{
