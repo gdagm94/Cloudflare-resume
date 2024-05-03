@@ -68,6 +68,18 @@ body {
   outline: 0 !important;
 }
 
+banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
