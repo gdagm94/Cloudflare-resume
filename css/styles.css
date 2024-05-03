@@ -412,11 +412,17 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+.lead-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Ensure container takes up the full viewport height */
+}
+
 .lead {
   font-size: 2.25rem;
   font-weight: 300;
-  text-align: center;
-}
+ }
 
 .display-1 {
   font-size: 6rem;
