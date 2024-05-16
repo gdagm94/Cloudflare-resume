@@ -42,6 +42,34 @@
   box-sizing: border-box;
 }
 
+#chatInterface {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#chatMessages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#userInputContainer {
+    display: flex;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+
+#userInput {
+    flex: 1;
+    padding: 8px;
+    border: none;
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -245,6 +273,15 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
+}
+
+ChatButton {
+  padding: 8px 15px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
 }
 
 button {
