@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const sendMessageButton = document.getElementById('send-message');
   const chatInput = document.getElementById('chat-input');
   const chatBoxMessages = document.getElementById('chat-box-messages');
+  const apiKey = 'RESUME'; // Replace with your OpenAI API key
+  const apiEndpoint = 'https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt'; // Replace with the correct endpoint
 
   closeChat.addEventListener('click', () => {
     chatBox.style.display = 'none';
@@ -16,38 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
       addMessageToChatBox('You', message);
       chatInput.value = '';
       showLoadingSpinner();
-      // Here you would add the code to send the message to your OpenAI API and handle the response
-      sendMessageButton.addEventListener('click', async () => {
-  const message = chatInput.value.trim();
-  if (message) {
-    addMessageToChatBox('You', message);
-    chatInput.value = '';
-    try {
-      const response = await fetch('https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `RESUME`
-        },
-        body: JSON.stringify({
-          prompt: message,
-          max_tokens: 150
-        })
-      });
-      const data = await response.json();
-      const aiMessage = data.choices[0].text.trim();
-      addMessageToChatBox('AI', aiMessage);
-    } catch (error) {
-      console.error('Error:', error);
-      addMessageToChatBox('AI', 'Sorry, something went wrong.');
-    }
-  }
-});
-
-      setTimeout(() => {
+      sendMessageToAPI(message).then(response => {
         hideLoadingSpinner();
-        addMessageToChatBox('Assistant', 'This is a response from the assistant.'); // Replace this line with the actual API response
-      }, 2000); // Simulate a delay for the response
+        addMessageToChatBox('Assistant', response);
+      }).catch(error => {
+        hideLoadingSpinner();
+        addMessageToChatBox('Assistant', 'Sorry, there was an error processing your request.');
+      });
     }
   });
 
@@ -78,5 +55,25 @@ document.addEventListener('DOMContentLoaded', function () {
     if (loadingSpinner) {
       loadingSpinner.remove();
     }
+  }
+
+  async function sendMessageToAPI(message) {
+    const response = await fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        prompt: message,
+        max_tokens: 150,
+        n: 1,
+        stop: null,
+        temperature: 0.7
+      })
+    });
+
+    const data = await response.json();
+    return data.choices[0].text.trim();
   }
 });
