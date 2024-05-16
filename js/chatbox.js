@@ -40,11 +40,11 @@ sendMessageButton.addEventListener('click', async () => {
     addMessageToChatBox('You', message);
     chatInput.value = '';
     try {
-      const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+      const response = await fetch('https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer YOUR_OPENAI_API_KEY`
+          'Authorization': `Bearer Resume`
         },
         body: JSON.stringify({
           prompt: message,
@@ -56,7 +56,7 @@ sendMessageButton.addEventListener('click', async () => {
       addMessageToChatBox('AI', aiMessage);
     } catch (error) {
       console.error('Error:', error);
-      addMessageToChatBox('AI', 'Sorry, something went wrong.');
+      addMessageToChatBox('AI', 'Sorry, something went wrong. Try again.');
     }
   }
 });
