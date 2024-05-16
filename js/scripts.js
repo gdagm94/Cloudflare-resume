@@ -33,10 +33,43 @@
     target: "#sideNav",
   });
 })(jQuery); // End of use strict
+
 //dark mode
 function make_me_dark() {
   var element = document.body;
   element.classList.toggle("dark-mode");
+}
+
+function queryAssistant(userQuery) {
+  // Make an API call to the OpenAI Assistants API
+  // Replace 'YOUR_API_KEY' with your actual API key
+  fetch('https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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'
+      },
+      body: JSON.stringify({
+          prompt: userQuery,
+          max_tokens: 150  // Adjust max_tokens based on your assistant's configuration
+      })
+  })
+  .then(response => response.json())
+  .then(data => {
+      document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userQuery + '</p>';
+      document.getElementById('chatMessages').innerHTML += '<p><strong>AI Assistant:</strong> ' + data.choices[0].text + '</p>';
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('chatMessages').innerHTML += '<p>An error occurred. Please try again later.</p>';
+  });
+}
+
+function sendMessage() {
+    var userInput = document.getElementById('userInput').value;
+    document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userInput + '</p>';
+    queryAssistant(userInput);
+    document.getElementById('userInput').value = ''; // Clear input field after sending message
 }
 
 function openForm() {
