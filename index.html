@@ -23,6 +23,24 @@ should have a prior knowledge of git and version control, in the process we deci
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
+<div class="chat-popup" id="myForm">
+  <div class="chat-header">
+    <h2>Ask me about Dagmawi</h2>
+    <button class="btn" onclick="closeForm()">×</button>
+  </div>
+  <div class="chat-content">
+    <p>Hey, ask me anything!</p>
+  </div>
+  <div class="chat-footer">
+    <input type="text" placeholder="Type your message...">
+    <button class="btn">Send</button>
+  </div>
+</div>
+
+<button class="open-button" onclick="openForm()">Open Chat</button>
+
+<script src="script.js"></script>
+  
 <body id="page-top">
   <!-- Navbar (appears at top of your webpage)-->
 
@@ -45,74 +63,30 @@ should have a prior knowledge of git and version control, in the process we deci
         </div>
   </nav>
 
-<div id="chatInterface">
-    <div id="chatMessages">
-        <!-- This is where the chat messages will be displayed -->
-    </div>
-    <div id="userInputContainer">
-        <input type="text" id="userInput" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
+<hr class="m-0" />
+<!-- Content-->
+<div class="container-fluid p-0">
+  <!-- About-->
+  <section class="resume-section" id="about">
+      <div class="resume-section-content">
+        <img class="top-img" src="sources/Untitled.png" alt="Dagmawi">
+        <br>
+        <br>
+         <h2 class="mb-4">About Me!</h2>
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+            <p class="lead mb-5">Results-driven IT professional with 5+ years of proven track record in implementing 
+            effective security measures and reducing risks. Adept at improving security postures through innovative strategies, 
+            resulting in a 40% decrease in security incidents year-over-year. Recognized for enhancing organizational resilience 
+            against cyber threats and significantly improving compliance rates with industry standards.</p>
+          </div>     
+          </div>
+            <center><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" 
+            data-vanity="dagmawieshete" data-version="v1"></div></center>
+          <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> 
     </div>
 </div>
-
-<script type="text/javascript">
-    function queryAssistant(userQuery) {
-        // Make an API call to the OpenAI Assistants API
-        // Replace 'YOUR_API_KEY' with your actual API key
-        fetch('https://platform.openai.com/assistants/asst_sOahCcirt3x03jeXPEoDG5Nt', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer sk-proj-ULqTrtq8eXptTeHazVBmT3BlbkFJMP3x7NLCykM9khQgj538'
-            },
-            body: JSON.stringify({
-                prompt: userQuery,
-                max_tokens: 150  // Adjust max_tokens based on your assistant's configuration
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userQuery + '</p>';
-            document.getElementById('chatMessages').innerHTML += '<p><strong>AI Assistant:</strong> ' + data.choices[0].text + '</p>';
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('chatMessages').innerHTML += '<p>An error occurred. Please try again later.</p>';
-        });
-    }
-
-    function sendMessage() {
-        var userInput = document.getElementById('userInput').value;
-        document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userInput + '</p>';
-        queryAssistant(userInput);
-        document.getElementById('userInput').value = ''; // Clear input field after sending message
-    }
-</script>
-  
-  <hr class="m-0" />
-  <!-- Content-->
-  <div class="container-fluid p-0">
-    <!-- About-->
-    <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <img class="top-img" src="sources/Untitled.png" alt="Dagmawi">
-          <br>
-          <br>
-           <h2 class="mb-4">About Me!</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div class="flex-grow-1">
-              <p class="lead mb-5">Results-driven IT professional with 5+ years of proven track record in implementing 
-              effective security measures and reducing risks. Adept at improving security postures through innovative strategies, 
-              resulting in a 40% decrease in security incidents year-over-year. Recognized for enhancing organizational resilience 
-              against cyber threats and significantly improving compliance rates with industry standards.</p>
-            </div>     
-            </div>
-              <center><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" 
-              data-vanity="dagmawieshete" data-version="v1"></div></center>
-            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> 
-      </div>
-  </div>
-    </section>
+  </section>
 
     <hr class="m-0" />
     <!-- Experience-->
