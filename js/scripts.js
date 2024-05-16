@@ -40,6 +40,10 @@ function make_me_dark() {
   element.classList.toggle("dark-mode");
 }
 
+window.onload = function() {
+  openForm();
+};
+
 function queryAssistant(userQuery) {
   // Make an API call to the OpenAI Assistants API
   // Replace 'YOUR_API_KEY' with your actual API key
@@ -47,7 +51,7 @@ function queryAssistant(userQuery) {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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'
+          'Authorization': 'Bearer Resume'
       },
       body: JSON.stringify({
           prompt: userQuery,
@@ -56,25 +60,33 @@ function queryAssistant(userQuery) {
   })
   .then(response => response.json())
   .then(data => {
-      document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userQuery + '</p>';
-      document.getElementById('chatMessages').innerHTML += '<p><strong>AI Assistant:</strong> ' + data.choices[0].text + '</p>';
+      document.getElementById('chat-content').innerHTML += '<p><strong>User:</strong> ' + userQuery + '</p>';
+      document.getElementById('chat-content').innerHTML += '<p><strong>AI Assistant:</strong> ' + data.choices[0].text + '</p>';
   })
   .catch(error => {
       console.error('Error:', error);
-      document.getElementById('chatMessages').innerHTML += '<p>An error occurred. Please try again later.</p>';
+      document.getElementById('chat-content').innerHTML += '<p>An error occurred. Please try again later.</p>';
   });
 }
 
 function sendMessage() {
-    var userInput = document.getElementById('userInput').value;
-    document.getElementById('chatMessages').innerHTML += '<p><strong>User:</strong> ' + userInput + '</p>';
-    queryAssistant(userInput);
-    document.getElementById('userInput').value = ''; // Clear input field after sending message
+    var chat-footer = document.getElementById('chat-footer').value;
+    document.getElementById('chat-content').innerHTML += '<p><strong>User:</strong> ' + chat-footer + '</p>';
+    queryAssistant(chat-footer);
+    document.getElementById('chat-footer').value = ''; // Clear input field after sending message
 }
 
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+document.getElementById("myForm").style.display = "none";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+      // Add event listener to the input field
+      document.getElementById('chat-footer').addEventListener('keypress', function (e) {
+          // Check if Enter key is pressed (key code 13)
+          if (e.key === 'Enter') {
+              // Call the sendMessage function
+              sendMessage();
+          }
+      });
+  });
