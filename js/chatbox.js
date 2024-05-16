@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const sendMessageButton = document.getElementById('send-message');
   const chatInput = document.getElementById('chat-input');
   const chatBoxMessages = document.getElementById('chat-box-messages');
-  const apiKey = process.env.RESUME; // Replace with your OpenAI API key
+  const apiKey = process.env.API_KEY; // Replace with your OpenAI API key
   const apiEndpoint = 'https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt'; // Replace with the correct endpoint
 
   closeChat.addEventListener('click', () => {
