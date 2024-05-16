@@ -55,14 +55,15 @@
 }
 
 .chat-header {
-  padding: 15px;
+  h4;
+  padding: 10px;
   background-color: #4CAF50;
   color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.chat-header h2 {
+.chat-header h3 {
   margin: 0;
 }
 
@@ -75,16 +76,6 @@
   background-color: #f1f1f1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-/* Button used to open the chat form */
-.open-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
 }
 
 /* Button to close the chat form */
@@ -113,6 +104,34 @@ Chatinput[type=text] {
   .chat-popup {
     max-width: 100%;
   }
+}
+
+#chatInterface {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#chatMessages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#userInputContainer {
+    display: flex;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+
+#userInput {
+    flex: 1;
+    padding: 8px;
+    border: none;
 }
 
 html {
