@@ -42,33 +42,77 @@
   box-sizing: border-box;
 }
 
-#chatInterface {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  border-radius: 20px;
+  background-color: #fff;
+  max-width: 300px;
 }
 
-#chatMessages {
-    max-height: 300px;
-    overflow-y: auto;
-    padding: 10px;
-    top: 100vh;
+.chat-header {
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-#userInputContainer {
-    display: flex;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ccc;
+.chat-header h2 {
+  margin: 0;
 }
 
-#userInput {
-    flex: 1;
-    padding: 8px;
-    border: none;
+.chat-content {
+  padding: 15px;
+}
+
+.chat-footer {
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Button used to open the chat form */
+.open-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Button to close the chat form */
+.Chatbtn {
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Chatbtn:hover {
+  background-color: #45a049;
+}
+
+Chatinput[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .chat-popup {
+    max-width: 100%;
+  }
 }
 
 html {
@@ -274,15 +318,6 @@ th {
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
-}
-
-ChatButton {
-  padding: 8px 15px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 0;
-  cursor: pointer;
 }
 
 button {
