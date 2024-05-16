@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer RESUME`
+          'Authorization': `RESUME`
         },
         body: JSON.stringify({
           prompt: message,
