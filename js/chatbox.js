@@ -15,7 +15,39 @@ document.addEventListener('DOMContentLoaded', function () {
     if (message) {
       addMessageToChatBox('You', message);
       chatInput.value = '';
+      showLoadingSpinner();
       // Here you would add the code to send the message to your OpenAI API and handle the response
+      sendMessageButton.addEventListener('click', async () => {
+  const message = chatInput.value.trim();
+  if (message) {
+    addMessageToChatBox('You', message);
+    chatInput.value = '';
+    try {
+      const response = await fetch('https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer RESUME`
+        },
+        body: JSON.stringify({
+          prompt: message,
+          max_tokens: 150
+        })
+      });
+      const data = await response.json();
+      const aiMessage = data.choices[0].text.trim();
+      addMessageToChatBox('AI', aiMessage);
+    } catch (error) {
+      console.error('Error:', error);
+      addMessageToChatBox('AI', 'Sorry, something went wrong.');
+    }
+  }
+});
+
+      setTimeout(() => {
+        hideLoadingSpinner();
+        addMessageToChatBox('Assistant', 'This is a response from the assistant.'); // Replace this line with the actual API response
+      }, 2000); // Simulate a delay for the response
     }
   });
 
@@ -32,32 +64,19 @@ document.addEventListener('DOMContentLoaded', function () {
     chatBoxMessages.appendChild(messageElement);
     chatBoxMessages.scrollTop = chatBoxMessages.scrollHeight;
   }
-});
 
-sendMessageButton.addEventListener('click', async () => {
-  const message = chatInput.value.trim();
-  if (message) {
-    addMessageToChatBox('You', message);
-    chatInput.value = '';
-    try {
-      const response = await fetch('https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer Resume`
-        },
-        body: JSON.stringify({
-          prompt: message,
-          max_tokens: 150
-        })
-      });
-      const data = await response.json();
-      const aiMessage = data.choices[0].text.trim();
-      addMessageToChatBox('AI', aiMessage);
-    } catch (error) {
-      console.error('Error:', error);
-      addMessageToChatBox('AI', 'Sorry, something went wrong. Try again.');
+  function showLoadingSpinner() {
+    const loadingSpinner = document.createElement('div');
+    loadingSpinner.classList.add('loading-spinner');
+    loadingSpinner.id = 'loading-spinner';
+    chatBoxMessages.appendChild(loadingSpinner);
+    chatBoxMessages.scrollTop = chatBoxMessages.scrollHeight;
+  }
+
+  function hideLoadingSpinner() {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if (loadingSpinner) {
+      loadingSpinner.remove();
     }
   }
 });
-
