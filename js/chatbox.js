@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   let apiKey;
   
-  fetch('https://86294b8c.cloudflare-resume.pages.dev')
+  fetch('https://7d04c660.cloudflare-resume.pages.dev')
     .then(response => response.json())
     .then(data => {
       apiKey = data.apiKey;
