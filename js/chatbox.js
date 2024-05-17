@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   let apiKey;
   
+  // Fetch API key from Cloudflare Worker
   fetch('https://7d04c660.cloudflare-resume.pages.dev')
     .then(response => response.json())
     .then(data => {
@@ -21,10 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const apiEndpoint = 'https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt';
 
+  // Close chat box
   closeChat.addEventListener('click', () => {
     chatBox.style.display = 'none';
   });
 
+  // Send message
   sendMessageButton.addEventListener('click', () => {
     const message = chatInput.value.trim();
     if (message && apiKey) {
@@ -41,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Send message on Enter key press
   chatInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       sendMessageButton.click();
