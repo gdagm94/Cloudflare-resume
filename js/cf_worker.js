@@ -12,6 +12,8 @@ async function handleRequest(request) {
 
   // Fetch the API key from the environment variable
   const apiKey = ResumeCF;
+
+  // Respond with the API key in JSON format
   return new Response(JSON.stringify({ apiKey }), {
     headers: {
       'Content-Type': 'application/json',
