@@ -1,17 +1,25 @@
-// Chat Box Functionality
 document.addEventListener('DOMContentLoaded', function () {
   const chatBox = document.getElementById('chat-box');
   const closeChat = document.getElementById('close-chat');
   const sendMessageButton = document.getElementById('send-message');
   const chatInput = document.getElementById('chat-input');
   const chatBoxMessages = document.getElementById('chat-box-messages');
-  const apiKey = process.env.API_KEY; // Replace with your OpenAI API key
-    if (!apiKey) {
-    console.error("API_KEY is not set!");
-    process.exit(1);
-    }
-    console.log(`Your API key is: ${apiKey}`);
-  const apiEndpoint = 'https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt'; // Replace with the correct endpoint
+  
+  let apiKey;
+  
+  fetch('https://86294b8c.cloudflare-resume.pages.dev')
+    .then(response => response.json())
+    .then(data => {
+      apiKey = data.apiKey;
+      if (!apiKey) {
+        console.error("API_KEY is not set!");
+        return;
+      }
+      console.log(`Your API key is: ${apiKey}`);
+    })
+    .catch(error => console.error('Error fetching API key:', error));
+
+  const apiEndpoint = 'https://platform.openai.com/playground/assistants?assistant=asst_sOahCcirt3x03jeXPEoDG5Nt';
 
   closeChat.addEventListener('click', () => {
     chatBox.style.display = 'none';
@@ -19,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   sendMessageButton.addEventListener('click', () => {
     const message = chatInput.value.trim();
-    if (message) {
+    if (message && apiKey) {
       addMessageToChatBox('You', message);
       chatInput.value = '';
       showLoadingSpinner();
