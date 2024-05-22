@@ -2,7 +2,7 @@
 
 /* Adjust maximum width and height for mobile */
 #chatbot {
-  max-width: 300px;
+  max-width: 250px;
   max-height: 300px;
 }
 
