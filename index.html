@@ -29,21 +29,6 @@ should have a prior knowledge of git and version control, in the process we deci
   <link rel="stylesheet" href="css/chatbot_desktop.css" media="screen and (min-width: 768px)">
   
 </head>
-
-<div id="chatbot" class="minimized">
-  <div class="chat-header">
-    <img src="sources/avatar.jpg" alt="Chatbot Avatar">
-    <button id="minimize-btn" onclick="minimizeChat()">-</button>
-    <button id="maximize-btn" onclick="maximizeChat()">+</button>
-  </div>
-  <div id="chat-container" class="chat-container">
-    <div id="chat-messages" class="chat-messages"></div>
-    <div class="user-input">
-      <input type="text" id="user-input" placeholder="Ask me about Dagmawi...">
-      <button id="send-btn" onclick="sendMessage()">Send</button>
-    </div>
-  </div>
-</div>
   
 <body id="page-top">
   <!-- Navbar (appears at top of your webpage)-->
@@ -64,6 +49,22 @@ should have a prior knowledge of git and version control, in the process we deci
     </div>
   </nav>
 
+
+<div id="chatbot" class="minimized">
+  <div class="chat-header">
+    <img src="sources/avatar.jpg" alt="Chatbot Avatar">
+    <button id="minimize-btn" onclick="minimizeChat()">-</button>
+    <button id="maximize-btn" onclick="maximizeChat()">+</button>
+  </div>
+  <div id="chat-container" class="chat-container">
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="user-input">
+      <input type="text" id="user-input" placeholder="Ask me about Dagmawi...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+  
 <hr class="m-0" />
 <!-- Content-->
 <div class="container-fluid p-0">
