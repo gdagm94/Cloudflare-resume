@@ -1,6 +1,6 @@
 /* Mobile-specific styles */
 
-/* Adjust maximum width for mobile */
+/* Adjust maximum width and height for mobile */
 #chatbot {
   max-width: 250px;
   max-height: 300px;
@@ -19,10 +19,7 @@
 }
 
 /* Increase padding and reduce margins */
-.chat-header {
-  padding: 10px;
-}
-
+.chat-header,
 .chat-container {
   padding: 10px;
 }
@@ -35,8 +32,6 @@
 /* Adjust button size and margins to fit within the chat window */
 .user-input button {
   padding: 8px 12px; /* Adjust button padding */
-  margin-left: 4px; /* Reduce left margin */
-  margin-right: 4px; /* Reduce right margin */
 }
 
 /* Customize scrollbar appearance */
