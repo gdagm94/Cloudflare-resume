@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Install openai
+        run: npm install openai@^4.0.0
+      
       - name: Install Puppeteer
         run: npm install puppeteer
 
