@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  max-width: 220px; /* Adjusted max-width for mobile */
+  max-width: 300px; /* Adjusted max-width for mobile */
   width: 100%; /* Added width for mobile */
   border: 1px solid #ccc;
   border-radius: 10px;
