@@ -296,6 +296,21 @@ should have a prior knowledge of git and version control, in the process we deci
     </section>
   </div>
 
+<div id="chatbot" class="minimized">
+  <div class="chat-header">
+    <img src="avatar.png" alt="Chatbot Avatar">
+    <button id="maximize-btn" onclick="toggleChat()">+</button>
+  </div>
+  <div id="chat-container" class="chat-container">
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="user-input">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+
+  
   <!-- Bootstrap core JS-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
