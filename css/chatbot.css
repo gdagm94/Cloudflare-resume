@@ -2,15 +2,20 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
+  max-width: 300px; /* Adjusted max-width for mobile */
+  width: 100%; /* Added width for mobile */
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fff;
   transition: width 0.5s;
 }
 
-.minimized {
-  width: 50px;
+.minimized #toggle-btn {
+  display: none; /* Hide toggle button when minimized */
+}
+
+.maximized #toggle-btn-alt {
+  display: none; /* Hide alternate toggle button when maximized */
 }
 
 .chat-header {
@@ -27,7 +32,8 @@
   border-radius: 50%;
 }
 
-#maximize-btn {
+#toggle-btn,
+#toggle-btn-alt {
   background-color: transparent;
   border: none;
   font-size: 20px;
@@ -41,6 +47,14 @@
 
 .chat-messages {
   padding: 10px;
+}
+
+.user-message {
+  text-align: right; /* Align user messages to the right */
+}
+
+.bot-message {
+  text-align: left; /* Align bot messages to the left */
 }
 
 .user-input {
