@@ -1,3 +1,7 @@
+// Add event listeners to minimize and maximize buttons
+document.getElementById("minimize-btn").addEventListener("click", minimizeChat);
+document.getElementById("maximize-btn").addEventListener("click", maximizeChat);
+
 function minimizeChat() {
   var chatbot = document.getElementById("chatbot");
   chatbot.classList.add("minimized");
