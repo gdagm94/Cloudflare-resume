@@ -1,3 +1,27 @@
+$(document).ready(function() {
+  $('#send-message').click(function() {
+    var userMessage = $('#chat-input').val();
+    if (userMessage.trim() !== '') {
+      $('#chat-box-messages').append('<div class="user-message">' + userMessage + '</div>');
+      $('#chat-input').val('');
+
+      // Simulated response from "Dagmawi"
+      setTimeout(function() {
+        $('#chat-box-messages').append('<div class="bot-message">Thank you for your message! I will get back to you soon.</div>');
+      }, 1000);
+    }
+  });
+
+  $('#close-chat').click(function() {
+    $('#chat-box').hide();
+  });
+
+  $('#open-chat').click(function() {
+    $('#chat-box').show();
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const chatBox = document.getElementById('chat-box');
   const closeChat = document.getElementById('close-chat');
