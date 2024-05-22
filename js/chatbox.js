@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let apiKey;
   
   // Fetch API key from Cloudflare Worker
-  fetch('https://worker.dagmawieshete.com')
+  fetch('https://cfworker.wddcp8xphs.workers.dev')
     .then(response => response.json())
     .then(data => {
       apiKey = data.apiKey;
