@@ -1,0 +1,58 @@
+/* Mobile-specific styles */
+
+/* Adjust maximum width for mobile */
+#chatbot {
+  max-width: 250px;
+}
+
+/* Adjust font size and line height for better readability */
+#chatbot {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Adjust avatar size */
+.chat-header img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Increase padding and reduce margins */
+.chat-header {
+  padding: 8px;
+}
+
+.chat-container {
+  padding: 10px;
+}
+
+/* Reduce top margin */
+.user-input {
+  margin-top: 8px;
+}
+
+/* Increase button size and adjust spacing */
+.user-input button {
+  padding: 8px 16px;
+  margin-left: 8px;
+}
+
+/* Customize scrollbar appearance */
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust chat message styles */
+.user-message,
+.bot-message {
+  max-width: 70%;
+}
