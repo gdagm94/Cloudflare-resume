@@ -24,6 +24,20 @@ should have a prior knowledge of git and version control, in the process we deci
   <link href="css/chatbot.css" rel="stylesheet" />
 </head>
 
+<div id="chatbot" class="minimized">
+  <div class="chat-header">
+    <img src="avatar.png" alt="Chatbot Avatar">
+    <button id="maximize-btn" onclick="toggleChat()">+</button>
+  </div>
+  <div id="chat-container" class="chat-container">
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="user-input">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
+  
 <body id="page-top">
   <!-- Navbar (appears at top of your webpage)-->
 
@@ -296,21 +310,6 @@ should have a prior knowledge of git and version control, in the process we deci
       </div>
     </section>
   </div>
-
-<div id="chatbot" class="minimized">
-  <div class="chat-header">
-    <img src="avatar.png" alt="Chatbot Avatar">
-    <button id="maximize-btn" onclick="toggleChat()">+</button>
-  </div>
-  <div id="chat-container" class="chat-container">
-    <div id="chat-messages" class="chat-messages"></div>
-    <div class="user-input">
-      <input type="text" id="user-input" placeholder="Type your message...">
-      <button id="send-btn" onclick="sendMessage()">Send</button>
-    </div>
-  </div>
-</div>
-
   
   <!-- Bootstrap core JS-->
 
