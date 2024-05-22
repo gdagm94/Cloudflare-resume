@@ -3,6 +3,7 @@
 /* Adjust maximum width for mobile */
 #chatbot {
   max-width: 250px;
+  max-height: 300px;
 }
 
 /* Adjust font size and line height for better readability */
@@ -13,13 +14,13 @@
 
 /* Adjust avatar size */
 .chat-header img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Increase padding and reduce margins */
 .chat-header {
-  padding: 8px;
+  padding: 10px;
 }
 
 .chat-container {
@@ -28,13 +29,13 @@
 
 /* Reduce top margin */
 .user-input {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 /* Increase button size and adjust spacing */
 .user-input button {
-  padding: 8px 16px;
-  margin-left: 8px;
+  padding: 5px 8px;
+  margin-left: 2px;
 }
 
 /* Customize scrollbar appearance */
