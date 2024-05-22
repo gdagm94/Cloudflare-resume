@@ -1,7 +1,13 @@
-function toggleChat() {
+function minimizeChat() {
   var chatbot = document.getElementById("chatbot");
-  chatbot.classList.toggle("minimized");
-  chatbot.classList.toggle("maximized");
+  chatbot.classList.add("minimized");
+  chatbot.classList.remove("maximized");
+}
+
+function maximizeChat() {
+  var chatbot = document.getElementById("chatbot");
+  chatbot.classList.remove("minimized");
+  chatbot.classList.add("maximized");
 }
 
 function sendMessage() {
