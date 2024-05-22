@@ -1,6 +1,7 @@
 function toggleChat() {
   var chatbot = document.getElementById("chatbot");
   chatbot.classList.toggle("minimized");
+  chatbot.classList.toggle("maximized");
 }
 
 function sendMessage() {
