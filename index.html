@@ -18,7 +18,15 @@ should have a prior knowledge of git and version control, in the process we deci
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+  <script>
+    (function() {
+      emailjs.init('service_s2kg4nf'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+    })();
+  </script>
+  
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -237,22 +245,21 @@ should have a prior knowledge of git and version control, in the process we deci
     </section>
 
   <!-- Contact Section -->
-  <hr class="m-0">
+<hr class="m-0">
 <section class="resume-section" id="contact">
   <div class="resume-section-content">
-    <h2 class="mb-4">Let's Connect:</h2>
+    <h2 class="mb-4">Let's Connect</h2>
     <h4 class="mb-0">Fill out the below form to get in contact with Dagmawi</h4>
-    <br>
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" id="contact-form" novalidate>
       <div class="form-group">
         <label for="name">Full Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name name" required>
         <div class="valid-feedback">Looks good!</div>
         <div class="invalid-feedback">Please enter your name.</div>
       </div>
       <div class="form-group">
         <label for="organization">Organization:</label>
-        <input type="text" class="form-control" id="organization" placeholder="If any, enter your organization">
+        <input type="text" class="form-control" id="organization" placeholder="Enter your organization">
       </div>
       <div class="form-group">
         <label for="preferredContact">Preferred method of contact:</label>
@@ -283,14 +290,18 @@ should have a prior knowledge of git and version control, in the process we deci
         <div class="valid-feedback">Looks good!</div>
         <div class="invalid-feedback">Please enter the subject of your message.</div>
       </div>
+
       <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-            <div class="valid-feedback">Looks good!</div>
-            <div class="invalid-feedback">Please enter a message.</div>
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" rows="6" placeholder="Enter your message" required></textarea>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a message.</div>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <div class="thank-you-message" id="thank-you-message">Thanks for contacting Dagmawi, he will get back to you shortly!</div>
+   </form>
+
     <script>
       (function() {
         'use strict';
@@ -307,7 +318,6 @@ should have a prior knowledge of git and version control, in the process we deci
           });
         }, false);
 
-        // Show/hide email/phone fields based on preferred contact method
         var preferredContactSelect = document.getElementById('preferredContact');
         var emailGroup = document.getElementById('emailGroup');
         var phoneGroup = document.getElementById('phoneGroup');
@@ -335,10 +345,32 @@ should have a prior knowledge of git and version control, in the process we deci
             document.getElementById('phoneNumber').removeAttribute('required');
           }
         });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          if (this.checkValidity()) {
+            emailjs.sendForm('service_s2kg4nf', 'template_a3hdcze', this)
+              .then(function() {
+                showThankYouMessage();
+              }, function(error) {
+                console.log('FAILED...', error);
+              });
+          }
+          this.classList.add('was-validated');
+        });
+
+        function showThankYouMessage() {
+          var thankYouMessage = document.getElementById('thank-you-message');
+          thankYouMessage.style.display = 'block';
+          setTimeout(function() {
+            thankYouMessage.style.display = 'none';
+          }, 3000);
+        }
       })();
     </script>
   </div>
-</section>
+</section>    
     
   <hr>
     <div class="text-center">
