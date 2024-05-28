@@ -15,7 +15,7 @@
       }
     }
   });
-
+  
   // Closes responsive menu when a scroll trigger link is clicked
   $(".js-scroll-trigger").click(function() {
     $(".navbar-collapse").collapse("hide");
@@ -31,3 +31,8 @@
 function make_me_dark() {
   $("body").toggleClass("dark-mode");
 }
+
+ // Emailjs user id script
+
+
+// Form validation
