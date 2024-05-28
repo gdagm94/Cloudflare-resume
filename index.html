@@ -261,11 +261,15 @@ should have a prior knowledge of git and version control, in the process we deci
       </div>
       <div id="emailGroup" class="form-group" style="display: none;">
         <label for="emailAddress">Email Address:</label>
-        <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email address">
+        <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email address" required>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
       </div>
       <div id="phoneGroup" class="form-group" style="display: none;">
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a valid phone number.</div>
       </div>
       <div class="form-group">
         <label for="subject">Subject:</label>
