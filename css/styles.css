@@ -84,6 +84,19 @@ p {
   margin-bottom: 1rem;
 }
 
+.thank-you-message {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: skyblue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -4396,7 +4409,7 @@ input[type=button].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0.25rem;ntnt
 }
 .card > hr {
   margin-right: 0;
