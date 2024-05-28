@@ -205,11 +205,19 @@ figure {
   display: block;
   margin-left: auto;
   margin-right:auto;
-  margin-bottom: 2.5%;
+  margin-bottom: 2%;
 
 }
 .awards-img{
-  width: 40vw;
+  width: 35vw;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.hobby-img{
+  width: 35vw;
   margin-bottom: 2%;
   margin-left: auto;
   margin-right: auto;
