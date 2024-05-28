@@ -271,7 +271,7 @@ should have a prior knowledge of git and version control, in the process we deci
       </div>
       <div id="phoneGroup" class="form-group" style="display: none;">
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number" pattern="\d*" required>
         <div class="valid-feedback">Looks good!</div>
         <div class="invalid-feedback">Please enter a valid phone number.</div>
       </div>
@@ -314,15 +314,23 @@ should have a prior knowledge of git and version control, in the process we deci
           if (preferredContactSelect.value === 'email') {
             emailGroup.style.display = 'block';
             phoneGroup.style.display = 'none';
+            document.getElementById('emailAddress').setAttribute('required', true);
+            document.getElementById('phoneNumber').removeAttribute('required');
           } else if (preferredContactSelect.value === 'phone') {
             emailGroup.style.display = 'none';
             phoneGroup.style.display = 'block';
+            document.getElementById('phoneNumber').setAttribute('required', true);
+            document.getElementById('emailAddress').removeAttribute('required');
           } else if (preferredContactSelect.value === 'both') {
             emailGroup.style.display = 'block';
             phoneGroup.style.display = 'block';
+            document.getElementById('emailAddress').setAttribute('required', true);
+            document.getElementById('phoneNumber').setAttribute('required', true);
           } else {
             emailGroup.style.display = 'none';
             phoneGroup.style.display = 'none';
+            document.getElementById('emailAddress').removeAttribute('required');
+            document.getElementById('phoneNumber').removeAttribute('required');
           }
         });
       })();
