@@ -9994,13 +9994,11 @@ h2,
 h3 {
     orphans: 3;
     widows: 3;
-  color: #3282b8;
   }
 
   h2,
 h3 {
     page-break-after: avoid;
-  color: #3282b8;
   }
 
   @page {
