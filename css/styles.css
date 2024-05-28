@@ -154,7 +154,7 @@ p {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 896px) {
   .button {
     font-size: 18px; /* Adjust font size for smaller screens */
     padding: 0.5em 0.8em; /* Adjust padding for smaller screens */
