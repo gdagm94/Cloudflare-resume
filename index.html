@@ -13,6 +13,12 @@ should have a prior knowledge of git and version control, in the process we deci
   <link href="css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="css/chatbot_mobile.css" media="screen and (max-width: 767px)">
   <link rel="stylesheet" href="css/chatbot_desktop.css" media="screen and (min-width: 768px)">
+  <script src="js/scripts.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -44,9 +50,9 @@ should have a prior knowledge of git and version control, in the process we deci
     </div>
   </div>
   
-  <hr class="m-0">
   <div class="container-fluid p-0">
     <!-- About Section -->
+    <hr class="m-0">
     <section class="resume-section" id="about">
       <div class="resume-section-content">
         <img class="top-img" src="sources/Untitled.png" alt="Dagmawi">
@@ -63,9 +69,9 @@ should have a prior knowledge of git and version control, in the process we deci
         <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
       </div>
     </section>
-
-    <hr class="m-0">
+    
     <!-- Experience-->
+    <hr class="m-0">
     <section class="resume-section" id="experience">
       <div class="resume-section-content">
         <h2 class="mb-4">Experience</h2>
@@ -121,20 +127,11 @@ should have a prior knowledge of git and version control, in the process we deci
           </div>
           <div class="flex-shrink-0"><span class="text-primary">August 2018 - December 2021</span></div>
         </div>
-        <!-- you can add more experiences as per your needs -->
-
-        <!-- <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Heading</h3>
-                            <div class="subheading mb-3">Sub Heading, details</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div> -->
       </div>
     </section>
-    <hr class="m-0" />
+   
     <!-- Education-->
+    <hr class="m-0">
     <section class="resume-section" id="education">
       <div class="resume-section-content">
         <h2 class="mb-4">Education</h2>
@@ -165,75 +162,77 @@ should have a prior knowledge of git and version control, in the process we deci
         </div>
       </div>
     </section>
-    <hr class="m-0" />
-        <!-- Awards-->
-        <section class="resume-section" id="awards">
-          <div class="resume-section-content">
-            <h2 class="mb-4">Certifications</h2>            
-              <div class="col-md-6">
-                <img class="awards-img " src="sources/certificate.svg" alt="">
-              </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-          <div class="flex-grow-1">
-            <h4 class="mb-0">🏆 CompTIA Security+ ce Certification</h4>
-            <ul>
-              <li>
-                <a href="https://www.credly.com/badges/7d766947-b338-4534-b003-e03747ef14b9/linked_in_profile" target="_blank"><div class="subheading mb-3">View my certification on Credly</div></a>
-              </li>
-            </ul>
+    
+    <!-- Awards-->
+    <hr class="m-0">
+    <section class="resume-section" id="awards">
+      <div class="resume-section-content">
+        <h2 class="mb-4">Certifications</h2>            
+          <div class="col-md-6">
+            <img class="awards-img " src="sources/certificate.svg" alt="">
+          </div>
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+      <div class="flex-grow-1">
+        <h4 class="mb-0">🏆 CompTIA Security+ ce Certification</h4>
+        <ul>
+          <li>
+            <a href="https://www.credly.com/badges/7d766947-b338-4534-b003-e03747ef14b9/linked_in_profile" target="_blank"><div class="subheading mb-3">View my certification on Credly</div></a>
+          </li>
+        </ul>
+          <br>
+      </div>
+      <div class="flex-shrink-0"><span class="text-primary">Expires: March 2027</span></div>
+    </div>
+        <br>
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="flex-grow-1">
+          <h4 class="mb-0">🏆 GIAC Certified Forensic Examiner (GCFE)</h4>
+          <ul>
+            <li>
+              <a href="https://www.credly.com/badges/51e40827-8ae9-4cb6-8ced-7ca238c4da7f/linked_in_profile" target="_blank"><div class="subheading mb-3">View my certification on Credly</div></a>
+            </li>
+          </ul>
               <br>
           </div>
-          <div class="flex-shrink-0"><span class="text-primary">Expires: March 2027</span></div>
+          <div class="flex-shrink-0"><span class="text-primary">Expires: July 2027</span></div>
         </div>
-            <br>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-                <div class="flex-grow-1">
-                  <h4 class="mb-0">🏆 GIAC Certified Forensic Examiner (GCFE)</h4>
-                  <ul>
-                    <li>
-                      <a href="https://www.credly.com/badges/51e40827-8ae9-4cb6-8ced-7ca238c4da7f/linked_in_profile" target="_blank"><div class="subheading mb-3">View my certification on Credly</div></a>
-                    </li>
-                  </ul>
-                      <br>
-                  </div>
-                  <div class="flex-shrink-0"><span class="text-primary">Expires: July 2027</span></div>
-                </div>
-          </div>
+      </div>
     </section>
-    <hr class="m-0" />
-    <!-- Hobbies-->
+    
+  <!-- Hobbies-->
+    <hr class="m-0">
     <section class="resume-section" id="hobbies">
       <div class="resume-section-content">
         <h2 class="mb-4">Personal Interests and Hobbies </h2>
        <div class="interest-category">
-            <h4 class="mb-0">🎨 Creative Pursuits</h4>
-            <ul>
-              <li>
-                  <strong>[Hobby 1]:</strong> [Brief description of hobby 1 and its significance to you.]
-              </li>
-            </ul>
+          <h4 class="mb-0">🎨 Creative Pursuits</h4>
+          <ul>
+            <li>Engaging in various sports activities such as soccer, tennis, and weight training to stay active and competitive.</li>
+            <li>Exploring the great outdoors and embracing the beauty of nature through hiking, camping, and outdoor adventures.</li>
+            <li>Expressing creativity through photography, capturing memorable moments and landscapes during travels to new destinations.</li>
+            <li>Dabbling in technology and indulging in techy hobbies, constantly learning and experimenting with new gadgets and software tools.</li>
+          </ul>
         </div>
         <div class="interest-category">
-            <h4 class="mb-0">🏋️‍♀️ Physical Activities</h4>
-            <ul>
-              <li>
-                  <strong>[Hobby 2]:</strong> [Brief description of hobby 2 and how it contributes to your well-being.]
-              </li>
-            </ul>
+          <h4 class="mb-0">🏋️‍♀️ Physical Activities</h4>
+          <ul>
+            <li>Participating in team sports like soccer, fostering teamwork and camaraderie on the field.</li>
+            <li>Fine-tuning tennis skills, finding joy in the precision and strategy of the game.</li>
+            <li>Embracing the challenge of weight training, striving for personal growth and physical fitness.</li>
+          </ul>
         </div>
         <div class="interest-category">
-            <h4 class="mb-0">📚 Intellectual Stimulation</h4>
-            <ul>
-              <li>
-                  <strong>[Hobby 3]:</strong> [Brief description of hobby 3 and how it helps you stay mentally engaged.]
-              </li>
-            </ul>
+          <h4 class="mb-0">📚 Intellectual Stimulation</h4>
+          <ul>
+            <li>Satisfying curiosity through culinary adventures, exploring diverse cuisines and flavors from around the globe.</li>
+            <li>Embarking on enriching journeys to new places, immersing in different cultures and broadening perspectives.</li>
+            <li>Harnessing the power of technology to enhance productivity and creativity, continuously expanding knowledge and skills in the digital realm.</li>
+          </ul>
         </div>
       </div>
     </section>
-<hr class="m-0" />
 
-<!-- Contact Section -->
+  <!-- Contact Section -->
     <hr class="m-0">
     <section class="resume-section" id="contact">
       <div class="resume-section-content">
@@ -278,15 +277,12 @@ should have a prior knowledge of git and version control, in the process we deci
         </script>
       </div>
     </section>
+    
     <hr>
     <div class="text-center">
       <p>Made by: Dagmawi Eshete</p>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="js/scripts.js"></script>
-  <script src="js/chatbot.js"></script>
+
 </body>
 </html>
