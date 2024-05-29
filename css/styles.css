@@ -206,7 +206,7 @@ p {
 }
 
 .download__text {
-  padding-left: 10px; /* Add padding to move the text to the right */
+  padding-left: 6px; /* Add padding to move the text to the right */
   color: var(--font-color);
   font-weight: 600;
 }
