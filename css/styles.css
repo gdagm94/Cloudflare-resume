@@ -246,7 +246,7 @@ p {
 }
 
 /* Mobile friendly styles */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .download {
     width: 120px;
     height: 35px;
@@ -254,7 +254,7 @@ p {
 
   .download__text {
     font-size: 12px;
-    padding-left: 5px; /* Adjust padding for mobile */
+    padding-left: 2px; /* Adjust padding for mobile */
   }
 
   .download__icon {
