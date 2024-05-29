@@ -245,6 +245,28 @@ p {
   box-shadow: 0px 0px var(--main-color);
 }
 
+/* Mobile friendly styles */
+@media (max-width: 600px) {
+  .download {
+    width: 120px;
+    height: 35px;
+  }
+
+  .download__text {
+    font-size: 12px;
+    padding-left: 5px; /* Adjust padding for mobile */
+  }
+
+  .download__icon {
+    transform: translateX(85px);
+    width: 35px;
+  }
+
+  .download:hover .download__icon {
+    width: 118px;
+  }
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
