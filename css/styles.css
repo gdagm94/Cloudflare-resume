@@ -198,21 +198,20 @@ p {
   background-color: var(--bg-color);
   border-radius: 10px;
   overflow: hidden;
-  
+  margin-left: -2px;
 }
 
 .download, .download__icon, .download__text {
   transition: all 0.4s;
 }
 
-.download .download__text {
-  transform: translateX(100px);
+.download__text {
+  padding-left: 10px; /* Add padding to move the text to the right */
   color: var(--font-color);
   font-weight: 600;
-  
 }
 
-.download .download__icon {
+.download__icon {
   position: absolute;
   transform: translateX(109px);
   height: 100%;
