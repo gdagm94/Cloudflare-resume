@@ -221,7 +221,7 @@ p {
   justify-content: center;
 }
 
-.download .svg {
+.download .svgdownload {
   width: 20px;
   fill: var(--main-color);
 }
