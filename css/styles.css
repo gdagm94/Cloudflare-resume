@@ -194,20 +194,22 @@ p {
   display: flex;
   align-items: center;
   border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
+  box-shadow: 4px 5px var(--main-color);
   background-color: var(--bg-color);
   border-radius: 10px;
   overflow: hidden;
+  
 }
 
 .download, .download__icon, .download__text {
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .download .download__text {
-  transform: translateX(22px);
+  transform: translateX(100px);
   color: var(--font-color);
   font-weight: 600;
+  
 }
 
 .download .download__icon {
@@ -240,7 +242,7 @@ p {
 }
 
 .download:active {
-  transform: translate(3px, 3px);
+  transform: translate(13px, 13px);
   box-shadow: 0px 0px var(--main-color);
 }
 
