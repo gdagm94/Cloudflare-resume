@@ -245,7 +245,7 @@ p {
 /* Mobile friendly styles */
 @media (max-width: 700px) {
   .download {
-    width: 120px;
+    width: 130px;
     height: 35px;
   }
 
