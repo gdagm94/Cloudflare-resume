@@ -142,12 +142,11 @@ p {
 }
 
 @keyframes fly-1 {
-  from {
-    transform: translateY(0.1em);
+  0% {
+    transform: translateY(.3em);
   }
-
-  to {
-    transform: translateY(-0.1em);
+  100% {
+    transform: translateY(-.3em);
   }
 }
 
