@@ -245,7 +245,7 @@ p {
 /* Mobile friendly styles */
 @media (max-width: 700px) {
   .download {
-    width: 130px;
+    width: 120px;
     height: 35px;
   }
 
@@ -256,7 +256,7 @@ p {
 
   .download__icon {
     transform: translateX(85px);
-    width: 35px;
+    width: 55px;
   }
 
   .download:hover .download__icon {
