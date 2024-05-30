@@ -97,7 +97,7 @@ p {
   z-index: 1000;
 }
 
-.button {
+.sdbutton {
   font-family: inherit;
   font-size: 20px;
   background: royalblue;
@@ -111,33 +111,34 @@ p {
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
-  }
+  
+}
 
-.button span {
+.sdbutton span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
 }
 
-.button svg {
+.sdbutton svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
 
-.button:hover .svg-wrapper {
+.sdbutton:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
-.button:hover svg {
+.sdbutton:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-.button:hover span {
+.sdbutton:hover span {
   transform: translateX(5em);
 }
 
-.button:active {
+.sdbutton:active {
   transform: scale(0.95);
 }
 
@@ -153,28 +154,28 @@ p {
 
 /* Media query for mobile devices */
 @media (max-width: 896px) {
-  .button {
+  .sdbutton {
     font-size: 18px; /* Adjust font size for smaller screens */
     padding: 0.5em 0.8em; /* Adjust padding for smaller screens */
   }
   
-  .button span {
+  .sdbutton span {
     margin-left: 0.2em; /* Adjust margin for smaller screens */
   }
   
-  .button:hover .svg-wrapper {
+  .sdbutton:hover .svg-wrapper {
     animation: none; /* Disable hover animation on mobile */
   }
   
-  .button:hover svg {
+  .sdbutton:hover svg {
     transform: none; /* Disable hover transform on mobile */
   }
   
-  .button:hover span {
+  .sdbutton:hover span {
     transform: none; /* Disable hover transform on mobile */
   }
   
-  .button:active {
+  .sdbutton:active {
     transform: scale(0.95); /* Keep active state transform */
   }
 }
