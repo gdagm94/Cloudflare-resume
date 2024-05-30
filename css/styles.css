@@ -152,28 +152,28 @@ p {
 
 /* Media query for mobile devices */
 @media (max-width: 600px) {
-  .button {
+  .submitbtn {
     font-size: 18px; /* Adjust font size for smaller screens */
     padding: 0.5em 0.8em; /* Adjust padding for smaller screens */
   }
   
-  .button span {
+  .submitbtn span {
     margin-left: 0.2em; /* Adjust margin for smaller screens */
   }
   
-  .button:hover .svg-wrapper {
+  .submitbtn:hover .svg-wrapper {
     animation: none; /* Disable hover animation on mobile */
   }
   
-  .button:hover svg {
+  .submitbtn:hover svg {
     transform: none; /* Disable hover transform on mobile */
   }
   
-  .button:hover span {
+  .submitbtn:hover span {
     transform: none; /* Disable hover transform on mobile */
   }
   
-  .button:active {
+  .submitbtn:active {
     transform: scale(0.95); /* Keep active state transform */
   }
 }
