@@ -111,9 +111,7 @@ p {
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
-  width: 100%; /* Ensure button is responsive */
-  max-width: 100px; /* Set a max-width for larger screens */
-}
+  }
 
 .button span {
   display: block;
