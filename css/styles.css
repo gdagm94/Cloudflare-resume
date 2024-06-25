@@ -242,11 +242,6 @@ p {
   box-shadow: 0px 0px var(--main-color);
 }
 
-#sideNav .download {
-  margin-top: 20px; /* Add margin for spacing */
-  margin-left: 20px; /* Adjust as needed to position */
-}
-
 /* Mobile friendly styles */
 @media (max-width: 700px) {
   .download {
