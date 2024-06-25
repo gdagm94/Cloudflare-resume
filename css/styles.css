@@ -377,7 +377,6 @@ figure {
   width: auto;
   height: auto;
   display: block; /* Changed to flex */
-  vertical-align: middle;
 }
 
 .edu-img{
@@ -4576,7 +4575,7 @@ input[type=button].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;ntnt
+  border-radius: 0.25rem;
 }
 .card > hr {
   margin-right: 0;
