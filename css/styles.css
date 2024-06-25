@@ -84,7 +84,7 @@ p {
   margin-bottom: 1rem;
 }
 
-.thank-you-message {
+#thank-you-message {
   display: none;
   position: fixed;
   top: 50%;
