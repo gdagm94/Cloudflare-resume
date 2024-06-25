@@ -86,12 +86,15 @@ p {
 
 #thank-you-message {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #303960;
   padding: 20px;
   border-radius: 10px;
   color: white;
   z-index: 1000;
-  margin-left: 40px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Adding a shadow effect */
   max-width: 80%; /* Adjust max-width as needed for responsiveness */
 
@@ -99,14 +102,22 @@ p {
   animation: showPopup 0.5s ease forwards;
 }
 
+/* Keyframes for fancy animation */
 @keyframes showPopup {
   0% {
     transform: translate(-50%, -60%);
     opacity: 0;
   }
-  100% {
+  25% {
     transform: translate(-50%, -50%);
     opacity: 1;
+  }
+  75% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -60%);
+    opacity: 0;
   }
 }
 
