@@ -114,6 +114,7 @@ p {
 @media (max-width: 768px) {
   #thank-you-message {
     max-width: 90%; /* Adjust max-width for smaller screens */
+    font-size: 14px;
   }
 }
 
