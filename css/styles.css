@@ -259,7 +259,7 @@ p {
 }
 
 #navbarSupportedContent .download {
-  order: 7; /* Move the button to the top */
+  order: -7; /* Move the button to the bottom */
 }
 
 /* Mobile friendly styles */
