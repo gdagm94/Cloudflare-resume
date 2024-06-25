@@ -379,17 +379,17 @@
         
           // Function to display thank you message and reset form
           function showThankYouMessage() {
-            var thankYouMessage = document.getElementById('thank-you-message');
-            thankYouMessage.style.display = 'block';
-        
-            setTimeout(function() {
-              thankYouMessage.style.display = 'none';
-              var contactForm = document.getElementById('contact-form');
-              contactForm.reset(); // Reset the form
-        
-              // Remove the 'was-validated' class to clear validation styles
-              contactForm.classList.remove('was-validated');
-            }, 1500); // Adjusted timeout duration
+          var thankYouMessage = document.getElementById('thank-you-message');
+          thankYouMessage.style.display = 'block';
+
+          setTimeout(function() {
+            thankYouMessage.style.display = 'none';
+            var contactForm = document.getElementById('contact-form');
+            contactForm.reset(); // Reset the form
+
+            // Remove the 'was-validated' class to clear validation styles
+            contactForm.classList.remove('was-validated');
+          }, 3000); // Adjusted timeout duration (3000 milliseconds = 3 seconds)
           }
         })();
         </script>
