@@ -87,10 +87,11 @@ p {
 .thank-you-message {
   display: none;
   position: fixed;
+  margin-left: 20px;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background: royalblue;
+  background: #303960;
   padding: 10px 20px;
   border-radius: 5px;
   color: black;
