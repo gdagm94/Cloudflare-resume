@@ -7895,8 +7895,8 @@ button.bg-dark:focus {
   margin-bottom: 1.5rem !important;
 }
 
-@media (max-width: 750px) {
-.h2 {
+@media (max-width: 900px) {
+h2 {
   font-size: 10px;
 }
 }
