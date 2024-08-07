@@ -124,7 +124,7 @@ p {
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   #thank-you-message {
-    max-width: 90%; /* Adjust max-width for smaller screens */
+    max-width: 100%; /* Adjust max-width for smaller screens */
     font-size: 14px;
   }
 }
