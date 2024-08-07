@@ -7897,7 +7897,7 @@ button.bg-dark:focus {
 
 @media (max-width: 750px) {
 .mb-4 {
-  font-size: small;
+  font-size: 18px;
 }
 }
 .ml-4,
