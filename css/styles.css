@@ -7896,7 +7896,7 @@ button.bg-dark:focus {
 }
 
 @media (max-width: 750px) {
-h2 {
+.h2 {
   font-size: 18px;
 }
 }
