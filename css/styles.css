@@ -4187,6 +4187,7 @@ input[type=button].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  letter-spacing: normal;
 }
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
@@ -4298,6 +4299,7 @@ input[type=button].btn-block {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  letter-spacing: normal;
 }
 .navbar-nav .dropdown-menu {
   position: static;
