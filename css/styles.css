@@ -4289,7 +4289,7 @@ input[type=button].btn-block {
 }
 
 .navbar-nav {
-  display: block;
+  display: grid;
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
