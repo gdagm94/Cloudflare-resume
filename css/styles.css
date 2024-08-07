@@ -7895,6 +7895,11 @@ button.bg-dark:focus {
   margin-bottom: 1.5rem !important;
 }
 
+@media (max-width: 750px) {
+.mb-4 {
+  font-size: small;
+}
+}
 .ml-4,
 .mx-4 {
   margin-left: 1.5rem !important;
@@ -10301,7 +10306,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 h1 {
