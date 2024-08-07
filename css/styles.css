@@ -210,6 +210,24 @@ p {
   }
 }
 
+/* LinkedIn Badge*/
+
+.sidebar-nav {
+  background-color: #303960;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  width: 250px;
+  overflow: auto;
+}
+
+/* CSS for LinkedIn badge visibility */
+@media only screen and (max-width: 767px) {
+  .badge-base {
+      display: none;
+  }
+}
+
 .download {
   --main-focus: #2d8cf0;
   --font-color: #323232;
